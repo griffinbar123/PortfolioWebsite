@@ -13,24 +13,24 @@ function Navbar() {
         <Link to="/" className="p-2   hover:bg-gray-300 hover:text-black rounded-xl"
         onClick={() => setDirection({
           HomeStartX:direction.HomeStartX, HomeStartY:direction.HomeStartY, 
-        ProjectsStartX:((width)+100), ProjectsStartY:0,
-        AboutStartX:0, AboutStartY:(height+100)
+        ProjectsStartX:((width)), ProjectsStartY:0,
+        AboutStartX:width/2, AboutStartY:(height)
         })}>
           Home
         </Link>
         <Link to="/projects" className="p-2 hover:bg-gray-300 hover:text-black rounded-xl"
         onClick={() => setDirection({
-          HomeStartX:((width*-1)-100), HomeStartY:0, 
+          HomeStartX:((width*-1)), HomeStartY:0, 
         ProjectsStartX:direction.ProjectsStartX, ProjectsStartY:direction.ProjectsStartY,
-        AboutStartX:((width*-1)-100), AboutStartY:(height+100)
+        AboutStartX:((width*-1)/2), AboutStartY:(height)
         })}>
           Projects
         </Link>
       </div>
         <Link to="/about" className="p-2  hover:bg-gray-300 hover:text-black rounded-xl"
         onClick={() => setDirection({
-          HomeStartX:(0), HomeStartY:height*-1-100, 
-        ProjectsStartX:(width)+100, ProjectsStartY:height*-1-100,
+          HomeStartX:(-width/2), HomeStartY:height*-1, 
+        ProjectsStartX:(width/2), ProjectsStartY:height*-1,
         AboutStartX:direction.AboutStartX, AboutStartY:direction.AboutStartY
         })}>
           About

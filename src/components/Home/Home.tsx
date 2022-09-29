@@ -8,9 +8,10 @@ function Home() {
   
   return (
     <motion.div 
-    initial = {{x:direction.HomeStartX, y:direction.HomeStartY}} 
-    animate= {{x:0, y:0}}
+    initial = {{x:direction.HomeStartX, y:direction.HomeStartY, opacity: 0}} 
+    animate= {{x:0, y:0, opacity: 1}}
     exit={{opacity:0}} 
+    transition={{duration: 1.0  }}
     className="bg-yellow-500 w-full h-full text-white" >
       Home
     </motion.div>

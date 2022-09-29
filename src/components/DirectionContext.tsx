@@ -4,8 +4,8 @@ import { createContext, useState } from "react";
 
 export const Direction = {
     direction: {HomeStartX:0, HomeStartY:0, 
-        ProjectsStartX:((0*-1)-100), ProjectsStartY:0,
-        AboutStartX:0, AboutStartY:((0*-1)-100)
+        ProjectsStartX:(1980), ProjectsStartY:0,
+        AboutStartX:0, AboutStartY:(1980)
       },
         setDirection: () => {}
 }
