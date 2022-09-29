@@ -11,14 +11,12 @@ function App() {
   return (
     <div className="overflow-hidden h-screen w-full bg-black text-white">
       <DirectionContextProvider>
-      <BrowserRouter>
       <Navbar/>
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
       </Routes>
-    </BrowserRouter>
     </DirectionContextProvider>
     </div>
   );
