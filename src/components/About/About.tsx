@@ -10,10 +10,10 @@ function About() {
   // console.log(direction);
 
   const animation = {
-    initial : {x:direction.AboutStartX, y:direction.AboutStartY, opacity: 0} ,
+      initial : {x:direction.AboutStartX, y:direction.AboutStartY, opacity: 0},
       animate: {x:0, y:0, opacity: 1},
-      exit:{x:direction.AboutStartX/2, y:direction.AboutStartY/2, opacity: 0, transition:{duration: 0.5   }},
-      transition:{duration: 1.3  }
+      exit:{x:direction.AboutStartX/2, y:direction.AboutStartY/2, opacity: 0, transition:{duration: 0.5}},
+      transition:{duration: 1.3}
   };
 
   // const animateItem = {
@@ -33,17 +33,17 @@ function About() {
       className="bg-green-500 w-full h-full overflow-hidden text-white pointer-events-none" >
         
         <motion.button 
-        whileHover={{scale: 1.4, x:60 ,y:26 ,opacity: 1}}
-        transition={{ease:"easeInOut"}}
-        className="absolute top-3 h-1/6 w-1/6 left-3 pointer-events-auto opacity-60">
+          whileHover={{scale: 1.4, x:60 ,y:26 ,opacity: 1}}
+          transition={{ease:"easeInOut"}}
+          className="absolute top-3 h-1/6 w-1/6 left-3 pointer-events-auto opacity-60">
           <Link to="/"
-          onClick={() => {       
-            setDirection({
-            HomeStartX:direction.HomeStartX, HomeStartY:direction.HomeStartY, 
-          ProjectsStartX:((width)), ProjectsStartY:0,
-          AboutStartX:width/2, AboutStartY:(height)
-          })}}
-          className=" h-full w-full items-start flex">
+            onClick={() => {       
+              setDirection({
+              HomeStartX:direction.HomeStartX, HomeStartY:direction.HomeStartY, 
+              ProjectsStartX:((width)), ProjectsStartY:0,
+              AboutStartX:width/2, AboutStartY:(height)
+            })}}
+            className=" h-full w-full items-start flex">
             <motion.div className=" h-full ">
               <motion.button className=" bg-gray-500 p-3 mt-1.5 h-full "/>
             </motion.div>
@@ -52,19 +52,18 @@ function About() {
             </motion.div>
           </Link>
         </motion.button>
-
         <motion.button 
-        whileHover={{scale: 1.4, x:-60 ,y:26 ,opacity: 1}}
-        transition={{ease:"easeInOut"}}
-        className="absolute top-3 h-1/6 w-1/6 right-3 pointer-events-auto opacity-60">
+          whileHover={{scale: 1.4, x:-60 ,y:26 ,opacity: 1}}
+          transition={{ease:"easeInOut"}}
+          className="absolute top-3 h-1/6 w-1/6 right-3 pointer-events-auto opacity-60">
           <Link to="/projects"
-          onClick={() => {
-            setDirection({
-            HomeStartX:((width*-1)), HomeStartY:0, 
-          ProjectsStartX:direction.ProjectsStartX, ProjectsStartY:direction.ProjectsStartY,
-          AboutStartX:((width*-1)/2), AboutStartY:(height)
-          })}}
-          className=" h-full flex flex-row-reverse">
+            onClick={() => {
+              setDirection({
+              HomeStartX:((width*-1)), HomeStartY:0, 
+              ProjectsStartX:direction.ProjectsStartX, ProjectsStartY:direction.ProjectsStartY,
+              AboutStartX:((width*-1)/2), AboutStartY:(height)
+            })}}
+            className=" h-full flex flex-row-reverse">
             <motion.div className=" h-full ">
               <motion.button className=" bg-gray-500 mt-1.5 p-3 h-full "/>
             </motion.div>
@@ -73,8 +72,6 @@ function About() {
             </motion.div>
           </Link>
         </motion.button>
-        
-  
       </motion.div>
   )
 }

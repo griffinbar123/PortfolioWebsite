@@ -13,15 +13,15 @@ function App() {
   return (
     <div className="overflow-hidden h-screen w-full static bg-black text-white">
       <DirectionContextProvider>
-      <Navbar/>
-      <AnimatePresence >
-      <Routes key={location.pathname} location={location}>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-      </Routes>
-      </AnimatePresence>
-    </DirectionContextProvider>
+        <Navbar/>
+        <AnimatePresence >
+          <Routes key={location.pathname} location={location}>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </AnimatePresence>
+      </DirectionContextProvider>
     </div>
   );
 }

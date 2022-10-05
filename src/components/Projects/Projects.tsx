@@ -11,10 +11,10 @@ function Projects() {
   // console.log(direction);
 
   const animation = {
-    initial : {x:direction.ProjectsStartX, y:direction.ProjectsStartY, opacity: 0} ,
+      initial : {x:direction.ProjectsStartX, y:direction.ProjectsStartY, opacity: 0},
       animate: {x:0, y:0, opacity: 1},
-      exit:{x:direction.ProjectsStartX, y:direction.ProjectsStartY, opacity: 0, transition:{duration: 0.5   }},
-      transition:{duration: 1.5   }
+      exit:{x:direction.ProjectsStartX, y:direction.ProjectsStartY, opacity: 0, transition:{duration: 0.5}},
+      transition:{duration: 1.5}
   };
   // const animateItem = {
   //   initial : {opacity: 0} ,
@@ -29,31 +29,31 @@ function Projects() {
       exit={animation.exit} 
       transition={animation.transition}
       className="bg-red-500 w-full h-full overflow-hidden text-white pointer-events-none" >
-        <Link to="/" className="absolute inset-y-0 z-60 left-3 h-full flex items-center flex-row-reverse"
+      <Link to="/" className="absolute inset-y-0 z-60 left-3 h-full flex items-center flex-row-reverse"
         onClick={() => {       
           setDirection({
           HomeStartX:direction.HomeStartX, HomeStartY:direction.HomeStartY, 
-        ProjectsStartX:((width)), ProjectsStartY:0,
-        AboutStartX:width/2, AboutStartY:(height)
-        })}}
+          ProjectsStartX:((width)), ProjectsStartY:0,
+          AboutStartX:width/2, AboutStartY:(height)
+          })}}
         >
           <motion.button 
-          whileHover={{scale: 1.4, x:6 ,opacity: 1}}
-          transition={{ease:"easeInOut"}}
-          className=" bg-gray-500 p-3 h-1/3 opacity-60 pointer-events-auto"/>
+            whileHover={{scale: 1.4, x:6 ,opacity: 1}}
+            transition={{ease:"easeInOut"}}
+            className=" bg-gray-500 p-3 h-1/3 opacity-60 pointer-events-auto"/>
         </Link>
         <motion.button 
-        whileHover={{scale: 1.4, x:60 ,y:-26 ,opacity: 1}}
-        transition={{ease:"easeInOut"}}
-        className="absolute bottom-3 h-1/6 w-1/6 left-3 pointer-events-auto opacity-60">
+          whileHover={{scale: 1.4, x:60 ,y:-26 ,opacity: 1}}
+          transition={{ease:"easeInOut"}}
+          className="absolute bottom-3 h-1/6 w-1/6 left-3 pointer-events-auto opacity-60">
           <Link to="/about"
-          onClick={() => {
-            setDirection({
-            HomeStartX:(-width/2), HomeStartY:height*-2.8, 
-          ProjectsStartX:(width/2), ProjectsStartY:height*-2.8,
-          AboutStartX:direction.AboutStartX, AboutStartY:direction.AboutStartY
-          })}}
-          className=" h-full flex items-end">
+            onClick={() => {
+              setDirection({
+              HomeStartX:(-width/2), HomeStartY:height*-2.8, 
+              ProjectsStartX:(width/2), ProjectsStartY:height*-2.8,
+              AboutStartX:direction.AboutStartX, AboutStartY:direction.AboutStartY
+            })}}
+            className=" h-full flex items-end">
             <motion.div className=" h-full ">
               <motion.button className=" bg-gray-500 p-3 h-full "/>
             </motion.div>
