@@ -36,8 +36,7 @@ function Home() {
           HomeStartX:((width*-1)), HomeStartY:0, 
           ProjectsStartX:direction.ProjectsStartX, ProjectsStartY:direction.ProjectsStartY,
           AboutStartX:((width*-1)/2), AboutStartY:(height)
-      })}}
-      >
+      })}}>
         <motion.button 
         whileHover={{scale: 1.4, x:-6 ,opacity: 1}}
         transition={{ease:"easeInOut"}}
@@ -55,16 +54,15 @@ function Home() {
             AboutStartX:direction.AboutStartX, AboutStartY:direction.AboutStartY
           })}}
         className=" h-full flex items-end flex-row-reverse">
-          <motion.div className=" h-full ">
-            <motion.button className=" bg-gray-500 p-3 h-full"/>
-          </motion.div>
-          <motion.div className="w-full">
-            <motion.button className={` bg-gray-500 p-3 w-full`}/>
-          </motion.div>
+          <div className=" h-full ">
+            <div className=" bg-gray-500 p-3 h-full"/>
+          </div>
+          <div className="w-full">
+            <div className={` bg-gray-500 p-3 w-full`}/>
+          </div>
         </Link>
       </motion.button>
       Home
-
     </motion.div>
   )
 }

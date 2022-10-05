@@ -54,12 +54,12 @@ function Projects() {
               AboutStartX:direction.AboutStartX, AboutStartY:direction.AboutStartY
             })}}
             className=" h-full flex items-end">
-            <motion.div className=" h-full ">
-              <motion.button className=" bg-gray-500 p-3 h-full "/>
-            </motion.div>
-            <motion.div className="w-full">
-              <motion.button className={` bg-gray-500 p-3 w-full`}/>
-            </motion.div>
+            <div className=" h-full ">
+              <div className=" bg-gray-500 p-3 h-full "/>
+            </div>
+            <div className="w-full">
+              <div className={` bg-gray-500 p-3 w-full`}/>
+            </div>
           </Link>
         </motion.button>
         Projects

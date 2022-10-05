@@ -31,7 +31,6 @@ function About() {
       exit={animation.exit} 
       transition={animation.transition}
       className="bg-green-500 w-full h-full overflow-hidden text-white pointer-events-none" >
-        
         <motion.button 
           whileHover={{scale: 1.4, x:60 ,y:26 ,opacity: 1}}
           transition={{ease:"easeInOut"}}
@@ -44,12 +43,12 @@ function About() {
               AboutStartX:width/2, AboutStartY:(height)
             })}}
             className=" h-full w-full items-start flex">
-            <motion.div className=" h-full ">
-              <motion.button className=" bg-gray-500 p-3 mt-1.5 h-full "/>
-            </motion.div>
-            <motion.div className="w-full">
-              <motion.button className={` bg-gray-500 p-3  w-full`}/>
-            </motion.div>
+            <div className=" h-full ">
+              <div className=" bg-gray-500 p-3 mt-1.5 h-full "/>
+            </div>
+            <div className="w-full">
+              <div className={` bg-gray-500 p-3  w-full`}/>
+            </div>
           </Link>
         </motion.button>
         <motion.button 
@@ -64,12 +63,12 @@ function About() {
               AboutStartX:((width*-1)/2), AboutStartY:(height)
             })}}
             className=" h-full flex flex-row-reverse">
-            <motion.div className=" h-full ">
-              <motion.button className=" bg-gray-500 mt-1.5 p-3 h-full "/>
-            </motion.div>
-            <motion.div className="w-full">
-              <motion.button className={` bg-gray-500 p-3 w-full`}/>
-            </motion.div>
+            <div className=" h-full ">
+              <div className=" bg-gray-500 mt-1.5 p-3 h-full "/>
+            </div>
+            <div className="w-full">
+              <div className={` bg-gray-500 p-3 w-full`}/>
+            </div>
           </Link>
         </motion.button>
       </motion.div>
