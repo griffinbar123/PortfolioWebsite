@@ -45,7 +45,7 @@ function Projects() {
         <motion.button 
         whileHover={{scale: 1.4, x:60 ,y:-26 ,opacity: 1}}
         transition={{ease:"easeInOut"}}
-        className="absolute bottom-3 h-1/6 w-1/6 left-3 pointer-events-auto">
+        className="absolute bottom-3 h-1/6 w-1/6 left-3 pointer-events-auto opacity-60">
           <Link to="/about"
           onClick={() => {
             setDirection({
@@ -55,10 +55,10 @@ function Projects() {
           })}}
           className=" h-full flex items-end">
             <motion.div className=" h-full ">
-              <motion.button className=" bg-gray-500 p-3 opacity-60 h-full "/>
+              <motion.button className=" bg-gray-500 p-3 h-full "/>
             </motion.div>
             <motion.div className="w-full">
-              <motion.button className={` bg-gray-500 p-3 opacity-60 w-full`}/>
+              <motion.button className={` bg-gray-500 p-3 w-full`}/>
             </motion.div>
           </Link>
         </motion.button>
