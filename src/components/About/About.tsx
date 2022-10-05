@@ -2,10 +2,11 @@ import React, {useContext} from 'react';
 import {DirectionContext} from '../DirectionContext'
 import { motion} from 'framer-motion'
 import { Link } from 'react-router-dom';
+import useWindowDimensions from '../window';
 
 
 function About() {
-  const {direction} = useContext(DirectionContext);
+  const {direction, setDirection} = useContext(DirectionContext);
   // console.log(direction);
 
   const animation = {
@@ -21,8 +22,9 @@ function About() {
   //     exit:{opacity: 0},
   //     transition:{duration: 1.6}
   // };
-  
+  const { height, width } = useWindowDimensions();
   return (
+    
       <motion.div 
       initial = {animation.initial}
       animate= {animation.animate}
@@ -35,7 +37,13 @@ function About() {
         transition={{ease:"easeInOut"}}
         className="absolute top-3 h-1/6 w-1/6 left-3 pointer-events-auto">
           <Link to="/"
-          className=" h-full flex items-start border-2">
+          onClick={() => {       
+            setDirection({
+            HomeStartX:direction.HomeStartX, HomeStartY:direction.HomeStartY, 
+          ProjectsStartX:((width)), ProjectsStartY:0,
+          AboutStartX:width/2, AboutStartY:(height)
+          })}}
+          className=" h-full w-full items-start flex">
             <motion.div className=" h-full ">
               <motion.button className=" bg-gray-500 p-3 opacity-60 h-full "/>
             </motion.div>
@@ -48,8 +56,14 @@ function About() {
         <motion.button 
         whileHover={{scale: 1.4, x:-60 ,y:26 ,opacity: 1}}
         transition={{ease:"easeInOut"}}
-        className="absolute top-3 border-2 h-1/6 w-1/6 right-3 pointer-events-auto">
+        className="absolute top-3 h-1/6 w-1/6 right-3 pointer-events-auto">
           <Link to="/projects"
+          onClick={() => {
+            setDirection({
+            HomeStartX:((width*-1)), HomeStartY:0, 
+          ProjectsStartX:direction.ProjectsStartX, ProjectsStartY:direction.ProjectsStartY,
+          AboutStartX:((width*-1)/2), AboutStartY:(height)
+          })}}
           className=" h-full flex flex-row-reverse">
             <motion.div className=" h-full ">
               <motion.button className=" bg-gray-500 p-3 opacity-60 h-full "/>
