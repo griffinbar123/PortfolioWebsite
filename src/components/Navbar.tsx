@@ -2,7 +2,6 @@ import React, {useContext} from 'react'
 import {Link, useLocation} from 'react-router-dom'
 import {DirectionContext} from './DirectionContext'
 import useWindowDimensions from './/window'
-import { motion} from 'framer-motion'
 import {useState, useEffect  } from 'react' 
 
 function Navbar() {
@@ -51,37 +50,26 @@ function Navbar() {
     <div className="absolute top-0 left-0 right-0  flex flex-col justify-items-center items-center bg-inherit pt-1">
       <div className="flex flex-col bg-gray-700 bg-opacity-50 justify-items-center items-center rounded-full p-3">
         <div className="flex justify-between">
-          <motion.div 
-            className={home_style}
-            key="direction1">
-            <Link to="/"
-              onClick={() => {       
+          <Link to="/" className={home_style}
+            onClick={() => {       
+            setDirection({
+              HomeStartX:direction.HomeStartX, HomeStartY:direction.HomeStartY, 
+            ProjectsStartX:((width)), ProjectsStartY:0,
+            AboutStartX:width/2, AboutStartY:(height)
+            })}}>
+              Home
+          </Link>
+          <Link to="/projects" className={project_style}
+            onClick={() => {
               setDirection({
-                HomeStartX:direction.HomeStartX, HomeStartY:direction.HomeStartY, 
-              ProjectsStartX:((width)), ProjectsStartY:0,
-              AboutStartX:width/2, AboutStartY:(height)
-              })}}>
-                Home
-            </Link>
-          </motion.div>
-          <motion.div 
-            className={project_style}
-            key="direction2">
-            <Link to="/projects"
-              onClick={() => {
-                setDirection({
-                HomeStartX:((width*-1)), HomeStartY:0, 
-                ProjectsStartX:direction.ProjectsStartX, ProjectsStartY:direction.ProjectsStartY,
-                AboutStartX:((width*-1)/2), AboutStartY:(height)
-              })}}>
-                Projects
-            </Link>
-          </motion.div>
+              HomeStartX:((width*-1)), HomeStartY:0, 
+              ProjectsStartX:direction.ProjectsStartX, ProjectsStartY:direction.ProjectsStartY,
+              AboutStartX:((width*-1)/2), AboutStartY:(height)
+            })}}>
+              Projects
+          </Link>
         </div>
-        <motion.div 
-          className={about_style}
-          key="direction3">
-          <Link to="/about"
+          <Link to="/about" className={about_style}
             onClick={() => {
               setDirection({
               HomeStartX:(-width/2), HomeStartY:height*-2.8, 
@@ -90,7 +78,6 @@ function Navbar() {
             })}}>
               About
           </Link>
-          </motion.div>
         </div>
       </div>
   )

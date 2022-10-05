@@ -12,7 +12,7 @@ function About() {
   const animation = {
       initial : {x:direction.AboutStartX, y:direction.AboutStartY, opacity: 0},
       animate: {x:0, y:0, opacity: 1},
-      exit:{x:direction.AboutStartX/2, y:direction.AboutStartY/2, opacity: 0, transition:{duration: 0.5}},
+      exit:{x:direction.AboutStartX, y:direction.AboutStartY, opacity: 0, transition:{duration: 0.5}},
       transition:{duration: 1.3}
   };
 
