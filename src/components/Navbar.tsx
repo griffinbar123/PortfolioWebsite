@@ -29,8 +29,8 @@ function Navbar() {
       </div>
         <Link to="/about" className="p-2  hover:bg-gray-300 hover:text-black rounded-xl"
         onClick={() => setDirection({
-          HomeStartX:(-width/2), HomeStartY:height*-1, 
-        ProjectsStartX:(width/2), ProjectsStartY:height*-1,
+          HomeStartX:(-width/2), HomeStartY:height*-2.8, 
+        ProjectsStartX:(width/2), ProjectsStartY:height*-2.8,
         AboutStartX:direction.AboutStartX, AboutStartY:direction.AboutStartY
         })}>
           About
