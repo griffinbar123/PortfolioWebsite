@@ -11,7 +11,8 @@ import { AnimatePresence } from 'framer-motion';
 function App() {
   const location =  useLocation();
   return (
-    <div className="overflow-hidden h-screen w-full static bg-black text-white">
+    <div className=" bg-primary
+    overflow-hidden h-screen w-full static  text-white">
       <DirectionContextProvider>
         <Navbar/>
         <AnimatePresence >
